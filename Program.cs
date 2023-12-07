@@ -10,6 +10,7 @@ game.Add(new BackRoom2());
 game.Add(new corridor());
 game.Add(new cuisine());
 game.Add(new salon());
+game.Add(new Devinette());
 
 while (!game.IsGameOver())
 {

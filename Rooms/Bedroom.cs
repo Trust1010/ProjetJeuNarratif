@@ -6,7 +6,8 @@
         internal override string CreateDescription() =>
 @"Tu es dans te reveil dans une chambre que tu ne reconnais pas.
 Il a une [etagere] Sur ta droite, il y a une [porte] qui mene au 
-reste de la maison Accrocher au mur, il y a un [mirroir].
+reste de la maison Accrocher au mur, il y a un [mirroir].Ou
+tu peux retourner [dormir] pour avoir une devinette
 ";
 
         internal override void  ReceiveChoice(string choice)
@@ -30,9 +31,11 @@ reste de la maison Accrocher au mur, il y a un [mirroir].
                     {
                         Console.WriteLine("La porte est bloque par quelque chose.");
                     }
-                        
-
+                   
+                    break;
+                case "dormir":
                     
+                    Game.Transition<Devinette>();
                     break;
                 case "mirroir":
                     if (!isHammerCollected)
